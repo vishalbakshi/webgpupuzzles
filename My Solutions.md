@@ -346,7 +346,7 @@ let i = gid.y + gid.x * wgs.y * twg.y; // Solution 2
 
 ![Visualizing my solution 2 for Puzzle 7 in Excel](screenshots/my_solution_puzzle_7_2.png)
 
-Solution 2 is basically Solution 1 transposed, since we're fixing consistently adding `gid.y` to 6 times `gid.x`, instead of adding `gid.x` to 6 times `gid.y`.
+Solution 2 is basically Solution 1 transposed, since we're consistently adding `gid.y` to 6 times `gid.x`, instead of adding `gid.x` to 6 times `gid.y`.
 
 Note that in both solutions above, `twg.x` can be replaced with `twg.y` and `wgs.x` can be replaced with `wgs.y` as these values are consistent in each Test case.
 
