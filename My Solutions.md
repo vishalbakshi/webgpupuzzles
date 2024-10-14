@@ -545,7 +545,7 @@ if (k + i >= arrayLength(&a)){
 
 In hindsight, I should have loaded `a` into shared memory `smemA` to make this operation quicker.
 
-Here is the visualization of the convolution between the first four sliding windows of `a` and `b`:
+Here is the visualization of the convolution between `b` and the first four sliding windows of `a`:
 
 ![Visualizing my solution for Puzzle 11 in Excel - first four iterations](screenshots/my_solution_puzzle_11_1.png)
 
@@ -833,7 +833,7 @@ I visualized the `idx` index for Test case 2 in Excel:
 
 ![Visualizing Test case 2 `idx` in Excel](screenshots/my_solution_puzzle_14_2.png)
 
-Test Case 2 was unique: it had only 1 thread per workgroup. Each of the 4 workgroups would be responsible for one dot-product between the 2x2 inputs `a` and `b`. To achieve this, I utilized wid.x and wid.y when loading data into shared memory. This was a breakthrough for me.
+Test Case 2 was unique: it had only 1 thread per workgroup. Each of the 4 workgroups would be responsible for one dot-product between the 2x2 inputs `a` and `b`. To achieve this, I utilized `wid.x` and `wid.y` when loading data into shared memory. This was a conceptual breakthrough for me.
 
 And finally, the following code passes Test cases 4 and 5:
 
