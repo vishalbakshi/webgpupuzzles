@@ -1,6 +1,6 @@
 ## Background
 
-This file contains my walkthrough of the official WebGPU Puzzle solutions that I found challenging to understand and/or critical in helping me understand core concepts of GPU programming.
+This file contains my walkthrough of the official WebGPU Puzzle solutions that I found challenging to understand and/or critical in helping me understand core concepts of GPU programming. You can find the Excel spreadsheet with my solution visualizations [here](/webgpupuzzles.xlsx).
 
 ## Puzzle 7
 
