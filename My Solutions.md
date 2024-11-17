@@ -44,9 +44,7 @@ For both test cases, `lid.x` sufficiently indexes into the input array `a` as it
 @compute @workgroup_size({{workgroupSize}})
 fn main(@builtin(local_invocation_id) lid: vec3<u32>) {
 
-  if(lid.x < arrayLength(&a)) {
-    out[lid.x] = a[lid.x] + b[lid.x]; 
-  }
+  out[lid.x] = a[lid.x] + b[lid.x]; 
   
 }
 ```
@@ -73,7 +71,7 @@ Input b  [  5  6  7  8  9 ]
 Expected [  5  7  9 11 13 ]
 ```
 
-Similar to Puzzle #1, `lid.x` is sufficient to index into each input array and perform a elementwise sum operation. I added a guard rail (`if (lid.x < arrayLength(&a))`) since the workgroup size is larger than the array lengths in each Test case and I don't want to index out of bounds.
+Similar to Puzzle #1, `lid.x` is sufficient to index into each input array and perform a elementwise sum operation. 
 
 ## Puzzle 3
 
